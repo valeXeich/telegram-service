@@ -6,6 +6,6 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000/'
+axios.defaults.baseURL = 'https://fastapi-backend-production.up.railway.app/'
 
 createApp(App).use(store).use(router).mount('#app')

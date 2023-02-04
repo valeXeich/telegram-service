@@ -5,7 +5,7 @@
       <div class="d-flex">
         <a class="nav-link" href="#">Price</a>
         <a class="nav-link ms-5" href="#">Support</a>
-        <a class="nav-link ms-5" href="#">Documentation</a>
+        <router-link to="https://fastapi-backend-production.up.railway.app/docs" class="nav-link ms-5" href="#">Documentation</router-link>
       </div>
       <router-link v-if="!auth" to="/login">
         <button class="login-btn m-2">Personal Cabinet</button>
