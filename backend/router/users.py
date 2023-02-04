@@ -12,7 +12,7 @@ router = APIRouter()
 
 @router.post("/login-telegram", status_code=status.HTTP_200_OK)
 async def login_telegram(
-    phone_number: str, phone_code: str | None = None, api_key=Depends(get_user_api_key)
+    phone_number: str, phone_code: str = None, api_key=Depends(get_user_api_key)
 ):
     await client.connect()
     if not phone_code:

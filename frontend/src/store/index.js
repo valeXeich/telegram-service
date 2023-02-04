@@ -17,7 +17,6 @@ export default createStore({
   },
   mutations: {
     initializeStore(state) {
-      console.log("vasya");
       const tgData = JSON.parse(localStorage.getItem("tgData"));
       const adminCode = localStorage.getItem("adminCode");
       if (tgData) {
