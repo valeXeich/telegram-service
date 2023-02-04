@@ -4,7 +4,7 @@ export default createStore({
   state: {
     tgData: '',
     auth: false,
-    bot_token: ''
+    bot_token: '6136374046:AAEBW6SmWbeoXjlP3fV7FFC0lPIeH8GGCdM'
   },
   getters: {
     tgData(state) {
