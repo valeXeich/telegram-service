@@ -7,14 +7,21 @@
           <a class="nav-link ms-5" href="#">Support</a>
           <a class="nav-link ms-5" href="#">Documentation</a>
       </div>
-      <button class="login-btn m-2">Personal Cabinet</button>
+      <router-link v-if="!auth" to="/login">
+        <button class="login-btn m-2">Personal Cabinet</button>
+      </router-link>
+      <router-link v-else to="/cabinet">
+        <button class="login-btn m-2">Personal Cabinet</button>
+      </router-link>
     </nav>
   </header>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
     export default {
-        name: 'Header'
+        name: 'Header',
+        computed: mapGetters(["auth"]),
     }
 </script>
 

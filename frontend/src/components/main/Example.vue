@@ -6,7 +6,7 @@
             THE ACCOUNT
         </h1>
     </div>
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
             <div class="col-5 mt-5">
                 <div class="d-flex">
