@@ -1,29 +1,29 @@
 <template>
-   <nav class="bg-light sidebar">
-            <div class="sidebar-sticky">
+    <nav class="bg-light sidebar">
+        <div class="sidebar-sticky">
             <ul class="nav flex-column">
                 <li class="back-color mt-4 nav-item">
-        <router-link to="/cabinet" class="nav-link link-dark">
-            <i class="bi bi-send-fill icon"></i>
-            <span class="section">APIKeys</span>
-        </router-link>
-      </li>
+                    <router-link to="/cabinet" class="nav-link link-dark">
+                        <i class="bi bi-send-fill icon"></i>
+                        <span class="section">APIKeys</span>
+                    </router-link>
+                </li>
             </ul>
-            </div>
-        </nav>
+        </div>
+    </nav>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+
+}
 </script>
 
 <style  scoped>
 .sidebar {
-  width: 200px;
-  border-right: 1px solid rgba(0,0,0,.12);
-  height: 840px;
+    width: 200px;
+    border-right: 1px solid rgba(0, 0, 0, .12);
+    height: 840px;
 }
 
 .section {

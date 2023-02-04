@@ -1,8 +1,8 @@
 <template>
-    <Header/>
-    <Info/>
-    <Advantages/>
-    <Example/>
+    <Header />
+    <Info />
+    <Advantages />
+    <Example />
 </template>
 
 <script>
@@ -11,14 +11,14 @@ import Advantages from '@/components/main/Advantages.vue'
 import Example from '@/components/main/Example.vue'
 import Header from "@/components/Header.vue"
 
-    export default {
-        components: {
-            Info,
-            Advantages,
-            Example,
-            Header
-        }
+export default {
+    components: {
+        Info,
+        Advantages,
+        Example,
+        Header
     }
+}
 </script>
 
 <style scoped>

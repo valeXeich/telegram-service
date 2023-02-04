@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy.sql import func
 
 from .db import Base
 
@@ -8,6 +9,7 @@ class APIKeys(Base):
 
     id = Column(Integer, primary_key=True)
     api_key = Column(String, unique=True, nullable=False)
+    created_date = Column(DateTime(timezone=True), server_default=func.now())
 
 
 class Chat(Base):

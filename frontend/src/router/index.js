@@ -10,11 +10,25 @@ const routes = [
   },
   {
     path: '/login',
-    component: Login
+    component: Login,
+    beforeEnter: (to, from, next) => {
+      if(store.state.auth === true) {
+          next('/cabinet');
+      } else {
+          next();
+      }
+  }
   },
   {
     path: '/cabinet',
-    component: Cabinet
+    component: Cabinet,
+    beforeEnter: (to, from, next) => {
+      if(store.state.auth === true) {
+          next();
+      } else {
+          next('/login');
+      }
+  }
   },
 ]
 
