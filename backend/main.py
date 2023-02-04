@@ -13,20 +13,20 @@ app.include_router(admins.router, tags=['Admin'])
 app.include_router(users.router, tags=['User'])
 
 
-origins = ["http://localhost:8080", "http://192.168.31.103:8080", "http://b126-188-163-102-106.ngrok.io", 'https://b126-188-163-102-106.ngrok.io']
+origins = ["http://localhost:8080", "https://frontend-vue-production.up.railway.app"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-# @app.on_event('startup')
-# async def startup():
-#     await init_models()
+@app.on_event('startup')
+async def startup():
+    await init_models()
 
 
 if __name__ == '__main__':

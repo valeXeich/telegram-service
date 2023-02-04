@@ -8,8 +8,7 @@ fake = Faker()
 
 
 async def message_distribution(client, session):
-    # chats = await get_chats(session)
-    chats = ['RAINE0012']
+    chats = await get_chats(session)
     if not chats:
         return
     counter = 0
