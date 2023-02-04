@@ -29,7 +29,6 @@ export default {
     methods: {
         async getApiKeys() {
             const response = await axios.get('get-api-keys');
-            console.log(response.data)
             this.apiKeys = response.data
         }
     },

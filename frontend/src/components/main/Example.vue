@@ -11,25 +11,19 @@
             <div class="col-5 mt-5">
                 <div class="d-flex">
                     <div class="circle">1</div>
-                    <h3 class="pointer-cursor blue-color section ms-2"
-                    @click="setTitle('Send message')"
-                    >
+                    <h3 class="pointer-cursor blue-color section ms-2" @click="setTitle('Send message')">
                         Send message
                     </h3>
                 </div>
                 <div class="d-flex mt-2">
                     <div class="circle">2</div>
-                    <h3 class="pointer-cursor blue-color section ms-2"
-                    @click="setTitle('Send photo')"
-                    >
+                    <h3 class="pointer-cursor blue-color section ms-2" @click="setTitle('Send photo')">
                         Send photo
                     </h3>
                 </div>
                 <div class="d-flex mt-2">
                     <div class="circle">3</div>
-                    <h3 class="pointer-cursor blue-color section ms-2"
-                    @click="setTitle('Find a user by phone number')"
-                    >
+                    <h3 class="pointer-cursor blue-color section ms-2" @click="setTitle('Find a user by phone number')">
                         Find a user by phone number
                     </h3>
                 </div>
@@ -39,8 +33,8 @@
                     <h4 class="text-uppercase blue-color">{{ title }}</h4>
                     <div v-if="description" class="description mb-5">
                         <span>
-                            If the dialog was initiated by the client, you can reply with a normal message. 
-                            This dialog is also paid, if you responded to the client. 
+                            If the dialog was initiated by the client, you can reply with a normal message.
+                            This dialog is also paid, if you responded to the client.
                             You can communicate with him for free for 24 hours from the moment of the answer.
                         </span>
                     </div>
@@ -55,19 +49,20 @@
                         </div>
                         <span class="text-white">curl \</span>
                         <br>
-                        <span class="text-white">-d</span> '{"phone": "79995253422","template": "template_name", "namespace" : "namespace_of_template", "language": { "code": "en", "policy": "deterministic"}}'
+                        <span class="text-white">-d</span> '{"phone": "79995253422","template": "template_name",
+                        "namespace" : "namespace_of_template", "language": { "code": "en", "policy": "deterministic"}}'
                         <span class="text-white">/</span>
                         <br>
                         <span class="comment"># Phone and template parameters</span>
                         <br>
-                        <span class="text-white">-H</span> "Content-Type: application/json" 
-                        <span class="text-white"> \ </span> 
+                        <span class="text-white">-H</span> "Content-Type: application/json"
+                        <span class="text-white"> \ </span>
                         <span class="comment"># Headers</span>
                         <br>
-                        <span class="text-white">-X POST \</span> 
+                        <span class="text-white">-X POST \</span>
                         <span class="comment"># Type = POST"</span>
                         <br>
-                        https://api.chat-api.com/sendTemplate?token=83763g87x" 
+                        https://api.chat-api.com/sendTemplate?token=83763g87x"
                         <span class="comment"># URL for request POST /message</span>
                     </div>
                 </div>
@@ -99,7 +94,6 @@ export default {
 </script>
 
 <style scoped>
-
 .main-text {
     margin-top: 70px;
     margin-bottom: 70px;
@@ -150,5 +144,4 @@ export default {
 .pointer-cursor {
     cursor: pointer;
 }
-
 </style>

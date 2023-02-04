@@ -13,19 +13,19 @@
                 </div>
                 <div class="mt-4">
                     <div class="d-flex">
-                        <img src="@/assets/good.svg" width="32" height="32"/>
+                        <img src="@/assets/good.svg" width="32" height="32" />
                         <p class="ms-3 possibilities">
                             <span class="blue-color">You can write first</span> by phone number
                         </p>
                     </div>
                     <div class="d-flex">
-                        <img src="@/assets/good.svg" width="32" height="32"/>
+                        <img src="@/assets/good.svg" width="32" height="32" />
                         <p class="ms-3 possibilities">
                             It is possible <span class="blue-color">to read messages in groups</span>
                         </p>
                     </div>
                     <div class="d-flex">
-                        <img src="@/assets/good.svg" width="32" height="32"/>
+                        <img src="@/assets/good.svg" width="32" height="32" />
                         <p class="ms-3 possibilities">
                             Ability <span class="blue-color">to communicate through the Telegram interface</span>
                         </p>
@@ -34,7 +34,7 @@
                 <button class="main-button mt-4">Try for free</button>
             </div>
             <div class="col-6 position-relative">
-                <img width="470" height="569" src="@/assets/phone.png"/>
+                <img width="470" height="569" src="@/assets/phone.png" />
                 <img class="message message-first" src="@/assets/message_1.jpg">
                 <img class="message message-second" src="@/assets/message_2.jpg">
                 <img class="message message-thrid" src="@/assets/message_3.jpg">
@@ -44,13 +44,13 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+
+}
 </script>
 
 <style scoped>
-.main-text{
+.main-text {
     color: #333333;
     font-size: 25px;
     font-weight: 700;
