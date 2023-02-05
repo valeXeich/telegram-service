@@ -2,10 +2,14 @@
     <nav class="bg-light sidebar">
         <div class="sidebar-sticky">
             <ul class="nav flex-column">
-                <li class="back-color mt-4 nav-item">
-                    <router-link to="/cabinet" class="nav-link link-dark">
+                <li class="mt-4 nav-item">
+                    <router-link to="/cabinet" class="nav-link link-dark back-color">
                         <i class="bi bi-send-fill icon"></i>
                         <span class="section">APIKeys</span>
+                    </router-link>
+                    <router-link to="/cabinet/settings" class="nav-link link-dark back-color">
+                        <i class="bi bi-gear-fill icon"></i>
+                        <span class="section">Settings</span>
                     </router-link>
                 </li>
             </ul>

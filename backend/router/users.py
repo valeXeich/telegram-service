@@ -1,9 +1,10 @@
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from telethon.errors import PhoneCodeExpiredError
-
+from telethon.errors.rpcerrorlist import ApiIdInvalidError
 from auth.auth import get_user_api_key
 from db.db import get_session
+from service.chats import create_chat
 from telegram_client import client
 from utils.tasks import message_distribution
 
@@ -16,11 +17,17 @@ async def login_telegram(
 ):
     await client.connect()
     if not phone_code:
-        await client.send_code_request(phone_number)
-        raise HTTPException(
-            status.HTTP_400_BAD_REQUEST,
-            "To login you need a phone code, we sent it to you",
-        )
+        try:
+            await client.send_code_request(phone_number)
+            raise HTTPException(
+                status.HTTP_400_BAD_REQUEST,
+                "To login you need a phone code, we sent it to you",
+            )
+        except ApiIdInvalidError:
+            raise HTTPException(
+                status.HTTP_400_BAD_REQUEST,
+                "The api_id/api_hash combination is invalid"
+            )
     else:
         try:
             await client.sign_in(phone_number, phone_code)
@@ -42,3 +49,13 @@ async def send_messages(
     else:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "You must log in to telegram")
     return {"ok": "Messaging started"}
+
+
+@router.post('/add-chat')
+async def add_chat(
+    chat_id: str, 
+    session: AsyncSession = Depends(get_session), 
+    api_key=Depends(get_user_api_key)
+):
+    await create_chat(chat_id, session)
+    return {'chat_id': chat_id}
